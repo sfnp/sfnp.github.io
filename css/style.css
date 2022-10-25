@@ -4,6 +4,29 @@
     background: #2f3136;
 }
 
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+    /* margin-right: 5px; */
+    background: rgb(168, 160, 160);
+}
+
+html::-webkit-scrollbar-thumb {
+    /* border: 5px solid transparent; */
+    border-radius: 10px;
+    background: rgb(83, 80, 80);
+    /* margin-right: 5px; */
+    
+}
+
+html {
+    scroll-padding-right: 6px;
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -8,6 +8,34 @@
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+    /* margin-right: 5px; */
+    background: rgb(168, 160, 160);
+}
+
+html::-webkit-scrollbar-thumb {
+    /* border: 5px solid transparent; */
+    border-radius: 10px;
+    background: rgb(83, 80, 80);
+    /* margin-right: 5px; */
+    
+}
+
+.banda {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
 a {
     text-decoration: none;
 }
