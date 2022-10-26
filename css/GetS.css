@@ -44,18 +44,6 @@ li {
     list-style: none;
 }
 
-::-webkit-scrollbar {
-    width: 0.25em;
-}
-
-::-webkit-scrollbar-track {
-    background: #2f3136;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #fff;
-}
-
 section {
     height: 100%;
     display: flex;

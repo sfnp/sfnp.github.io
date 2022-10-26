@@ -25,7 +25,6 @@ html::-webkit-scrollbar-thumb {
     /* margin-right: 5px; */
     
 }
-
 .banda {
     opacity: 0;
     transition: all 1s;
@@ -43,17 +42,6 @@ li {
     list-style: none;
 }
 
-::-webkit-scrollbar {
-    width: 0.25em;
-}
-
-::-webkit-scrollbar-track {
-    background: #2f3136;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #fff;
-}
 
 section {
     display: flex;
