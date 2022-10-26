@@ -9,8 +9,8 @@ selectField.onclick = function() {
     arrowIcon.classList.toggle("rotatea");
 }
 
-for(option of options) {
-    option.onclick = function() {
-        selectText.innerHTML = this.textContent;
-    }
-}
+// for(option of options) {
+//     option.onclick = function() {
+//         selectText.innerHTML = this.textContent;
+//     }
+// }

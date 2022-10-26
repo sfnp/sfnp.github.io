@@ -189,6 +189,17 @@ header ul li a:hover {
 
 
 @media (max-width: 992px) {
+    .selector {
+        width: 100%;
+    }
+    
+    #selectField {
+        margin-left: 0px;
+    }
+    
+        .selector #selectField .selectText {
+            font-size: 1px;
+        }
     section {
         padding: 50px 10px 10px;
     }
@@ -230,7 +241,7 @@ header ul li a:hover {
     }
     .content a, .mlinks {
         font-size: 1em;
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
     }
     .imgBx {
         margin-bottom: 40px;

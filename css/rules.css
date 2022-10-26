@@ -227,19 +227,31 @@ header a:hover {
     flex-direction: column;
 }
 
+#list a:hover {
+    background: #2f3136;
+    color: #fff; 
+}
+
 .options {
     width: 100%;
     padding: 15px;
     list-style: none;
+    /* border-bottom: 1px solid black; */
     cursor: pointer;
     box-sizing: border-box;
     color: #2f3136;
     transition :color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
+.current {
+    cursor: default;
+    color: #fff;
+    border-bottom: 1px solid whitesmoke;
+}
+
 .options:hover {
-    background: #2f3136;
-    color: #fff;    
+    /* background: #2f3136;
+    color: #fff;     */
 }
 
 .hidden {
@@ -313,7 +325,6 @@ header a:hover {
 
 .prules #preface h1 {
     font-size: 2em;
-
 }
 
 .prules #chatrules {
@@ -395,6 +406,30 @@ header a:hover {
 }
 
 @media (max-width: 992px) {
+
+    .prules .mrules {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prules .mrules a {
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .selector {
+        width: 100%;
+    }
+    
+    #selectField {
+        margin-left: 0px;
+    }
+    
+        .selector #selectField .selectText {
+            font-size: 1px;
+        }
     section {
         padding: 50px 10px 10px;
     }
@@ -440,7 +475,7 @@ header a:hover {
     }
     .content a, .mlinks {
         font-size: 1em;
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
     }
     .imgBx {
         margin-bottom: 40px;
