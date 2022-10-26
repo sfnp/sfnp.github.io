@@ -7,7 +7,6 @@
     font-family: 'Rubik', sans-serif;
     scroll-behavior: smooth;
 }
-
 html::-webkit-scrollbar {
     width: 6px;
 }
@@ -408,6 +407,9 @@ header a:hover {
 @media (max-width: 992px) {
     section {
         padding: 50px 10px 10px;
+    }
+    iframe {
+        width: 250px;
     }
     .container {
         /* flex-direction: column; */

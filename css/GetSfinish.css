@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+*::selection {
+    background: #2f3136;
 }
 
 html::-webkit-scrollbar {
@@ -26,13 +23,11 @@ html::-webkit-scrollbar-thumb {
     
 }
 
-.banda {
-    opacity: 0;
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
 a {
@@ -192,9 +187,13 @@ header ul li a:hover {
     }
 }
 
+
 @media (max-width: 992px) {
     section {
         padding: 50px 10px 10px;
+    }
+    iframe {
+        width: 250px;
     }
     .container {
         flex-direction: column;
