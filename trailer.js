@@ -8,7 +8,7 @@ const animateTrailer = (e, interacting) => {
   
   const keyframes = {
     transform: `translate(${x}px, ${y}px) scale(${interacting ? 2 : 1})`,
-    border: `1px solid ${interacting ? '#2f3136' : '#fff'}`
+    border: `1px solid ${interacting ? '#2f3136' : '#fff'}`,
   }
   
   trailer.animate(keyframes, { 

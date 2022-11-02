@@ -3,10 +3,6 @@
 section:hover > #trailer {
     opacity: 1;
   }
-  
-a {
-    /* pointer-events: none !important; */
-}
 
   #trailer {
     height: 20px;
