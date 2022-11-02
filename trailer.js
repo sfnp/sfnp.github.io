@@ -3,9 +3,12 @@ const trailer = document.getElementById("trailer");
 const animateTrailer = (e, interacting) => {
   const x = e.clientX - trailer.offsetWidth / 2,
         y = e.clientY - trailer.offsetHeight / 2;
+  // const x = e.clientX - trailer.offsetWidth,
+  // y = e.clientY - trailer.offsetHeight;
   
   const keyframes = {
-    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 2 : 1})`,
+    border: `1px solid ${interacting ? '#2f3136' : '#fff'}`
   }
   
   trailer.animate(keyframes, { 
@@ -15,13 +18,8 @@ const animateTrailer = (e, interacting) => {
 }
 
 const getTrailerClass = type => {
-//   switch(type) {
-//     case "video":
-//       return "fa-solid fa-play";
-//     default:
       return "fa-solid fa-arrow-up-right"; 
   }
-// }
 
 window.onmousemove = e => {
   const interactable = e.target.closest(".interactable"),

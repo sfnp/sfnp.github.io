@@ -4,6 +4,10 @@ section:hover > #trailer {
     opacity: 1;
   }
   
+a {
+    /* pointer-events: none !important; */
+}
+
   #trailer {
     height: 20px;
     width: 20px;
@@ -34,8 +38,9 @@ section:hover > #trailer {
     opacity: 0;
     transition: opacity 400ms ease;
   }
-  
-  .interactable {
+
+
+  /* .interactable {
     aspect-ratio: 1 / 1.5;
     width: clamp(120px, 40vmin, 600px);
     background-position: center 50%;
@@ -48,7 +53,7 @@ section:hover > #trailer {
   .interactable:hover {
     background-size: 105%;
     opacity: 0.8;
-  }
+  } */
 
 *::selection {
     background: #2f3136;
@@ -192,7 +197,7 @@ header ul li a:hover {
 }
 
 .mlinks {
-    display: inline-block;
+    display: block;
     padding: 15px 30px;
     background: #2f3136;
     color: #fff;
@@ -203,6 +208,8 @@ header ul li a:hover {
     font-size: 1.2em;
     font-weight: 500;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
 }
 
 .mlinks:hover {
