@@ -1,12 +1,6 @@
 const trailer = document.getElementById("trailer");
 
-function rainbow() {
-  trailer.style.backgroundColor = "red";
-}
 
-function polako() {
-  trailer.style.backgroundColor = "white";
-}
 
 const animateTrailer = (e, interacting) => {
   const x = e.clientX - trailer.offsetWidth / 2,
@@ -14,6 +8,7 @@ const animateTrailer = (e, interacting) => {
   const keyframes = {
     transform: `translate(${x}px, ${y}px) scale(${interacting ? 2 : 1})`,
     border: `1px solid ${interacting ? 'white' : 'transparent'}`,
+    cursor: `none`
   }
 
 
@@ -33,10 +28,6 @@ const getTrailerClass = type => {
   return "fa-solid fa-arrow-up";
 }
 
-const getTrailerText = type => {
-  return 'bruh';
-}
-
 window.onmousemove = e => {
   const interactable = e.target.closest(".tra")
   const text = e.target.closest(".text"),
@@ -54,7 +45,24 @@ window.onmousemove = e => {
   }
 }
 
+function rainbow() {
+  trailer.style.backgroundColor = "red";
+}
+
+function polako() {
+  trailer.style.backgroundColor = "white";
+}
+
+function cursorOn() {
+  trailer.style.display = 'grid';
+}
+
+function cursorOff() {
+  trailer.style.display = 'none';
+}
+
 document.addEventListener('keydown', r => {
+  if(trailer.style.display === 'grid') {
     if (r.keyCode === 82) {
       if (trailer.style.backgroundColor !== 'red') {
         rainbow()
@@ -68,4 +76,22 @@ document.addEventListener('keydown', r => {
       polako();
       }
     }
-})
+  }
+
+
+
+
+
+    if(r.keyCode === 67) {
+      if (trailer.style.display !== 'grid') {
+        alert("YOU HAVE UNLEASED THE CURSOR MONSTER. (click k to kill it and r for rainbow colored cursor monster.).")
+        cursorOn()
+      }
+    }
+
+    if(r.keyCode === 75) {
+      if(trailer.style.display === 'grid') {
+        alert('You have killed the monster click to revive it back.')  
+        cursorOff();
+    }
+}})
