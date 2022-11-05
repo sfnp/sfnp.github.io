@@ -264,9 +264,9 @@ header ul li a:hover {
 
 
 @media (max-width: 992px) {
-*{
-    cursor: none;
-}
+    #trailer {
+        display: none;
+    }
 
     section {
         padding: 50px 10px 10px;
