@@ -1,39 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-section:hover > #trailer {
+section:hover>#trailer {
     opacity: 1;
-  }
+}
 
-  #trailer {
+i {
+    /* color: black; */
+    /* background: black; */
+    color: white;
+    scale: 1.2;
+}
+
+#trailer {
     height: 20px;
     width: 20px;
     background-color: white;
+    mix-blend-mode: difference;
+    /* border: 0.01px solid white; */
     border-radius: 20px;
-    
+
     position: fixed;
     left: 0px;
     top: 0px;
     z-index: 10000;
-    
+
     pointer-events: none;
     opacity: 0;
     transition: opacity 500ms ease;
-    
+
     display: grid;
     place-items: center;
-  }
-  
-  #trailer:not([data-type=""]) > #trailer-icon {
+    animation: colors 5s infinite;
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#trailer:not([data-type=""])>#trailer-icon {
     opacity: 1;
-  }
-  
-  #trailer-icon {
+}
+
+#trailer-icon {
     font-size: 6px;
     line-height: 4px;
-    
+
     opacity: 0;
     transition: opacity 400ms ease;
-  }
+}
+
+#trailer::before {
+content: '';
+position: absolute;
+background: #2f3136;
+width: 50px;
+height: 50px;
+opacity: 0.2;
+border-radius: 50%;
+}
+
+ * {
+    cursor: default;
+}
 
 *::selection {
     background: #2f3136;
@@ -55,7 +88,7 @@ html::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgb(83, 80, 80);
     /* margin-right: 5px; */
-    
+
 }
 
 * {
@@ -67,6 +100,8 @@ html::-webkit-scrollbar-thumb {
 
 a {
     text-decoration: none;
+    cursor: none;
+
 }
 
 li {
@@ -181,7 +216,7 @@ header ul li a:hover {
     padding: 15px 30px;
     background: #2f3136;
     color: #fff;
-    transition :color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     text-decoration: none;
     font-weight: 500;
     border-radius: 30px;
@@ -209,9 +244,12 @@ header ul li a:hover {
 }
 
 @keyframes animate {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(15px);
     }
+
     50% {
         transform: translateY(30px);
     }
@@ -229,20 +267,24 @@ header ul li a:hover {
     section {
         padding: 50px 10px 10px;
     }
+
     iframe {
         width: 250px;
     }
+
     .container {
         flex-direction: column;
         height: auto;
         padding: 20px;
     }
+
     .container .content {
         transform: translateY(0px);
         max-width: 100%;
         padding: 30px;
         margin-top: -40px;
     }
+
     header {
         position: relative;
         flex-direction: column;
@@ -265,17 +307,24 @@ header ul li a:hover {
     header ul li a {
         display: inline-block;
     }
-    .content a, .mlinks {
+
+    .content a,
+    .mlinks {
         font-size: 1em;
         padding: 10px 20px;
     }
+
     .imgBx {
         margin-bottom: 40px;
     }
+
     @keyframes animate {
-        0%, 100% {
+
+        0%,
+        100% {
             transform: translateY(-15px);
         }
+
         50% {
             transform: translateY(15px);
         }
