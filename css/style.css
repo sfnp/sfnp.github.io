@@ -55,7 +55,7 @@ i {
 #trailer-icon {
     font-size: 6px;
     line-height: 4px;
-
+    color: black;
     opacity: 0;
     transition: opacity 400ms ease;
 }
@@ -234,6 +234,8 @@ header ul li a:hover {
 }
 
 .mlinks:hover {
+    font-weight: 500;
+    font-size: 1.2em;
     background: #fff;
     color: #2f3136;
 }
@@ -271,16 +273,12 @@ header ul li a:hover {
 
 @media (max-width: 992px) {
 
-    * {
-        cursor: none;
-    }
-
     #trailer {
         display: none;
     }
 
     section {
-        cursor: none;
+        /* cursor: none; */
         padding: 50px 10px 10px;
     }
 

@@ -1,14 +1,11 @@
 const trailer = document.getElementById("trailer");
 
-
-
 const animateTrailer = (e, interacting) => {
   const x = e.clientX - trailer.offsetWidth / 2,
     y = e.clientY - trailer.offsetHeight / 2;
   const keyframes = {
     transform: `translate(${x}px, ${y}px) scale(${interacting ? 2 : 1})`,
     border: `1px solid ${interacting ? 'white' : 'transparent'}`,
-    cursor: `none`
   }
 
 
@@ -55,13 +52,19 @@ function polako() {
 
 function cursorOn() {
   trailer.style.display = 'grid';
+  trailer.style.pointerEvents = 'none';
 }
+
 
 function cursorOff() {
   trailer.style.display = 'none';
 }
 
 document.addEventListener('keydown', r => {
+  if(r.keyCode === 72) {
+    alert(`c = cursor \n \t r = rainbow cursor \n \t d = default cursor \n k = kill the cursor`)
+  }
+
   if(trailer.style.display === 'grid') {
     if (r.keyCode === 82) {
       if (trailer.style.backgroundColor !== 'red') {
