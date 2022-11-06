@@ -62,7 +62,7 @@ function cursorOff() {
 
 document.addEventListener('keydown', r => {
   if(r.keyCode === 72) {
-    alert(`c = cursor \n \t r = rainbow cursor \n \t d = default cursor \n k = kill the cursor`)
+    alert(`YOU HAVE FOUND A SECRET THING!!! TYPE THIS LETTERS TO UNLOCK THE FOLLOWING: \n'\c'\ = cursor \n \t '\r'\ = rainbow cursor \n \t '\d'\ = default cursor \n '\k'\ = kill/remove the cursor`)
   }
 
   if(trailer.style.display === 'grid') {
