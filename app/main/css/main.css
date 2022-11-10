@@ -303,6 +303,14 @@ header ul li a:hover {
   }
 }
 @media (max-width: 992px) {
+  .back-video {
+    display: none;
+  }
+
+  section {
+    background: #2f3136;
+  }
+
   #trailer {
     display: none;
   }
