@@ -5,12 +5,9 @@ section:hover > #trailer {
 
 .back-video {
   position: absolute;
-  /* right: 0;
-  /* bottom: 0; */
-  width: 100%;
-  height: 100%;
+  right: 0;
+   bottom: 0;
   z-index: -10000;
-  background-attachment: fixed;
 }
 
 i {
@@ -376,4 +373,21 @@ header ul li a:hover {
       transform: translateY(15px);
     }
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map */
