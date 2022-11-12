@@ -97,4 +97,4 @@ document.addEventListener('keydown', r => {
         alert('You have killed the monster click to revive it back.')  
         cursorOff();
     }
-}})
+}});
