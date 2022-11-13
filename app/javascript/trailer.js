@@ -1,4 +1,5 @@
 const trailer = document.getElementById("trailer");
+const gopher = document.getElementById('anchor');
 
 const animateTrailer = (e, interacting) => {
   const x = e.clientX - trailer.offsetWidth / 2,
@@ -56,45 +57,58 @@ function cursorOn() {
 }
 
 
+
 function cursorOff() {
   trailer.style.display = 'none';
 }
 
+function gopherOn() {
+  gopher.style.display = 'block';
+}
+
+const gopherOff = () => {
+  gopher.style.display = 'none';
+}
+
 document.addEventListener('keydown', r => {
-  if(r.keyCode === 72) {
-    alert(`YOU HAVE FOUND A SECRET THING!!! TYPE THIS LETTERS TO UNLOCK THE FOLLOWING: \n'\ c '\ = cursor \n \t '\ r '\ = rainbow cursor \n \t '\ d '\ = default cursor \n '\ k '\ = kill/remove the cursor`)
+    console.log(r);
+  if (r.keyCode === 72) {
+    alert(`YOU HAVE FOUND A SECRET THING!!! TYPE THIS LETTERS TO UNLOCK THE FOLLOWING: \n'\ c '\ = cursor on/off \n \t '\ r '\ = rainbow cursor on/off \n \' g \' = Gopher Monster Show/Hide`)
   }
 
-  if(trailer.style.display === 'grid') {
+  if (trailer.style.display === 'grid') {
     if (r.keyCode === 82) {
       if (trailer.style.backgroundColor !== 'red') {
         rainbow()
-        alert('You have unlocked a rainbow color for your cursor. press d to remove it.');
+        alert('You have unlocked a rainbow color for your cursor. press \'r\' again to remove it.');
+      }
+      else {
+        polako();
+        alert('Removed rainbow color.');
+
       }
     }
 
-    if (r.keyCode === 68) {
-      if (trailer.style.backgroundColor === 'red') {
-      alert('Removed rainbow color.');
-      polako();
-      }
-    }
+
+    // if (r.keyCode === 68) {
+    //   if (trailer.style.backgroundColor === 'red') {
+    //     alert('Removed rainbow color.');
+    //     polako();
+    //   }
+    // }
   }
 
 
 
 
-
-    if(r.keyCode === 67) {
-      if (trailer.style.display !== 'grid') {
-        alert("YOU HAVE UNLEASED THE CURSOR MONSTER. (click k to kill it and r for rainbow colored cursor monster.).")
-        cursorOn()
-      }
+  if (r.keyCode === 67) {
+    if (trailer.style.display !== 'grid') {
+      alert("YOU HAVE ENABLED CURSOR CLICK \'c\' again to remove it")
+      cursorOn()
     }
-
-    if(r.keyCode === 75) {
-      if(trailer.style.display === 'grid') {
-        alert('You have killed the monster click to revive it back.')  
-        cursorOff();
+    else {
+      cursorOff()
+      alert("TO REMOVE THE CURSOR CLICK OK")
     }
-}});
+  }
+});
