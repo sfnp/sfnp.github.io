@@ -186,6 +186,7 @@ header ul li a {
 header ul li a:hover {
   background: #fff;
   color: #000;
+  color: black;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -453,4 +454,5 @@ header ul li a:hover {
       transform: translateY(15px);
     }
   }
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
